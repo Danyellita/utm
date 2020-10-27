@@ -65,15 +65,15 @@
     </nav>
 
    <div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="{{ route('manage.users.create') }}">Users</a>
-  <a href="{{ route('manage.sectors.index') }}">Sectors</a>
-  <a href="#about">Streets</a>
-  <a href="#about">PharmacyAddresses</a>
-  <a href="#about">Pharmacy</a>
-  <a href="{{ route('manage.categories.create') }}">Categories</a>
-  <a href="#about">Products</a>
-  <a href="#about">Prices</a>
+  <a class="active" href="#home"><i class="fas fa-house-user"></i> Home</a>
+  <a href="{{ route('manage.users.create') }}"> <i class="fas fa-users"></i> Users</a>
+  <a href="{{ route('manage.sectors.index') }}"><i class="fas fa-search-location"></i> Sectors</a>
+  <a href="#about"> <i class="fas fa-street-view"></i> Streets</a>
+  <a href="#about"><i class="fas fa-map-pin"></i> PharmacyAddresses</a>
+  <a href="#about"><i class="fas fa-prescription-bottle-alt"></i> Pharmacy</a>
+  <a href="{{ route('manage.categories.create') }}"><i class="fas fa-shopping-bag"></i> Categories</a>
+  <a href="#about"> <i class="fas fa-cart-plus"></i> Products</a>
+  <a href="#about"><i class="fas fa-dollar-sign"></i> Prices</a>
 </div>
 <div class="content-wrapper rounded" style="margin-left:250px; padding-top: 1rem; margin-right: 50px;">
 
