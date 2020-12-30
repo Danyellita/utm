@@ -8,9 +8,10 @@ class Price extends Model
 {
     protected $guarded = [
     	'id',
-    ]
+    ];
+    
     public function product()
     {
-    	return $this->belongstTo(Product::class);
+    	return $this->belongsTo(Product::class);
     }
 }

@@ -24,12 +24,16 @@ class CreateProductsTable extends Migration
             $table->string('packing_quantity');
             $table->integer('weight');
             $table->string('product_measurement');
-            $table->string('image')->nullable();
+            $table->string('picture')->nullable();
+            $table->unsignedBigInteger('pharmacy_id');
             $table->timestamps();
 
             $table->foreign('region_id')
                 ->references('id')
                 ->on('regions');
+            $table->foreign('pharmacy_id')
+                ->references('id')
+                ->on('pharmacies');
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')

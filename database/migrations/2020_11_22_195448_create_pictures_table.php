@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSimilarproductsTable extends Migration
+class CreatePicturesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,17 @@ class CreateSimilarproductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('similarproducts', function (Blueprint $table) {
+        Schema::create('pictures', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->unsignedBigInteger('product_id');
-            $table->string('image')->nullable();
-            $table->unsignedBiginteger('region_id');
+            $table->string('image');
             $table->timestamps();
 
-            $table->foreign('product_id')
+             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-
-            $table->foreign('region_id')
-                ->references('id')
-                ->on('regions');
         });
     }
 
@@ -40,6 +34,6 @@ class CreateSimilarproductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('similarproducts');
+        Schema::dropIfExists('pictures');
     }
 }

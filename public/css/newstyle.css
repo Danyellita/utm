@@ -1,187 +1,80 @@
-.sidenav {
-    height: 100%;
-    width: 165px;
-    position: fixed;
-    z-index: 2;
-    top: 50px;
-    left: 0;
-    /*background-color: #111;*/
-    overflow-x: hidden;
-    padding-top: 20px;
-    background-color: #343a40;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 0px;
-    text-decoration: none;
-    /*font-size: 16px;*/
-    color: white;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #B0E0E6;
-}
-
-.sidebar-nav {
-    padding-left: 25px;
-}
-
-li {
-    list-style-type: none;
-    line-height:1.5;
-}
-
-.submenu {
-    line-height:1;
-    font-size: 12;
-}
-
-.sub-menu{
-    padding:0; 
-    display:none;
-    list-style:none;}
-
-.sidebar-nav li.active ul{
-    display:block;
-}
-
-#footer {
-    background-color:#DCDCDC; 
-    left: 70px;
-    bottom: 0px;
-    height: 20px;
-    position: fixed;
-    width: 100%;
-    clear:both;
-}
-
-.card {
-    margin-left:50px; 
-    margin-right: 50px;
-    margin-bottom: 15px;
-    /*top: 80px;*/
-}
-
-.content-wrapper {
-    margin-left: 165px;
-    height: 100%;
-}
-
-form {
-    margin-bottom: 0px;
-}
-
-.form-row {
-    margin-left: 0px;
-}
-
-input {
-    margin-bottom: 10px;
-}
-
-select {
-    margin-top: 5px;
-}
-
-#addrole {
-    margin-bottom: 10px;
-}
-
-thead {
-    text-align: center;
-}
-
-#saved {
-    margin: 5px 0px 10px 0px;
-}
-
-.name {
-    margin-top: 5px; 
-    margin-left: 40px;
-}
-
-#edituser {
-    margin-top: 5px; 
-    margin-left:22px;
-}
-
-#flash {
-    opacity: 30%;
-    text-align: center; 
-    font-size:20px; 
-    margin-top: 5px;
-}
-
-.pagination {
-    padding-left: 10px;
-}
-
-body {
-    background-color: lightblue;
-}
-
-label {
-    margin-left: 15px;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    text-align: center; 
-    display: block;
-}
-
-.dataTables_info {
-    margin-left: 15px;
-}
-
-.dataTables_paginate {
-    margin-bottom: 5px;
-}
-
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url(https://pngimg.com/uploads/welcome/welcome_PNG46.png) center no-repeat #fff;
-}
-
-@media screen and (max-width: 700px) {
-  aside {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  /*.sidebar a {float: left;}
-  div.content {margin-left: 0;}*/
-}
-
-@media screen and (max-width: 400px) {
-  aside a {
-    text-align: center;
-    float: none;
-  }
-}
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
 
 .sidebar {
-  /*margin-top: 70px;*/
-  /*margin:0;*/
+  margin-top: 70;
   padding: 0;
   width: 200px;
-  background-color: white;
-  position: fixed;
+  background-color:#DCDCDC;
+  position:fixed;
   height: 100%;
   overflow: auto;
-
 }
+form {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+     z-index: 1;
+    /*position: relative;*/
+  }
+  .sidebar a {
+    float: left;
+  }
+  .content-wrapper {
+    margin-left: 0;
+  }
+  .card{
+    overflow: auto;
+  }
+  #fluid {
+    padding-top: 200px;
+   }
+}
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    /*position: absolute;*/
+  }
+  .sidebar a {
+    float: left;
+  }
+  .content-wrapper {
+    margin-left: 0;
+    /*background-color: green/;*/
+  }
+  .card{
+    overflow: auto;
+  }
+  #fluid {
 
+    padding-top: 500px;
+   }
+}
+#footer {
+  background-color:#009ABB; 
+  clear: both; 
+  height: 80px; 
+  margin-bottom: 0px;
+}
+#footer1 {
+  background-color:grey;
+  clear: both; 
+  height: 50px;
+  margin-bottom: 0px;
+}
+.card-footer {
+  padding: 0px;
+}
+@media screen and (min-width: 701px){
+.content-wrapper {
+  margin-left:210px; 
+  padding-top: 70px; 
+  margin-right: 10px;
+}
+}
 .sidebar a {
   display: block;
   color: black;
@@ -199,18 +92,17 @@ body {
   color: white;
 }
 
-div.content {
+.content-wrappe {
   margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
+  /*height: 1000px;*/
 }
 
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
     height: auto;
-    position: relative;
-    overflow: scroll;
+    position: fixed;
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
@@ -222,12 +114,217 @@ div.content {
     float: none;
   }
 }
-body.fixed-nav {
-    padding-top: 70px;
+
+#cards {
+  margin-top: 70px;
 }
 
+.fixed-nav {
+  background-color: #00BFFF;
+}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #333333;*/
+}
 
+li {
+  float: left;
+}
 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.theme-color {
+  color: green;
+}
+li a:hover {
+  background-color: #111111;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}

@@ -17,7 +17,7 @@ class CreatePurchasesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('quantity');
             $table->unsignedBigInteger('product_id');
-            $table->string('document_number');
+            $table->string('document_number')->nullable();
             
             $table->timestamps();
             $table->foreign('product_id')

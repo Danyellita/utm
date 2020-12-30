@@ -7,8 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>UTM</title>
-    {{-- <link rel="shortcut icon" href="{{ URL::asset('img/orto-favicon.png') }}"> --}}
+    <title>Farmacie.md</title>
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href=" {{ asset('css/newstyle.css') }}"> 
@@ -17,12 +17,13 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-   <script
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCupeOkafv0hwvVJNZ3oFRjc98qYzBeILo&callback=initMap"
       defer
     ></script>
-    {{-- <script src="{{ asset('js/scripts.js') }}" defer></script> --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js"></script>
     
 </head>
@@ -31,7 +32,7 @@
     <nav class="navbar navbar-expand-md  fixed-top" style="height:70px; box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); background:#A9A9A9;">
         <ul class="navbar-nav mr-auto" >
             <li>
-              <img src="https://proiecte.utm.md/wp-content/uploads/sites/17/2017/11/UTM_LOGO.png" style="width: 30%; padding-bottom: 10px;">
+             <img alt="" src="{{ asset('img/logo.svg') }}" style="width: 200px; height: 50px">
             </li>
             
         </ul>
@@ -45,7 +46,7 @@
               </li>
             @else
               <li class="nav-item dropdown">
-                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" style="color:black;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
@@ -65,26 +66,22 @@
     </nav>
 
    <div class="sidebar">
-  <a class="active" href="#home"><i class="fas fa-house-user"></i> Home</a>
-  <a href="{{ route('manage.users.create') }}"> <i class="fas fa-users"></i> Users</a>
-  <a href="{{ route('manage.sectors.index') }}"><i class="fas fa-search-location"></i> Sectors</a>
-  <a href="#about"> <i class="fas fa-street-view"></i> Streets</a>
-  <a href="#about"><i class="fas fa-map-pin"></i> PharmacyAddresses</a>
-  <a href="#about"><i class="fas fa-prescription-bottle-alt"></i> Pharmacy</a>
-  <a href="{{ route('manage.categories.create') }}"><i class="fas fa-shopping-bag"></i> Categories</a>
-  <a href="#about"> <i class="fas fa-cart-plus"></i> Products</a>
-  <a href="#about"><i class="fas fa-dollar-sign"></i> Prices</a>
-</div>
-<div class="content-wrapper rounded" style="margin-left:250px; padding-top: 1rem; margin-right: 50px;">
+    <a class="active" href="#home"><i class="fas fa-house-user"></i> Home</a>
+    <a href="{{ route('manage.users.index') }}"> <i class="fas fa-users"></i> Users</a>
+    <a href="{{ route('manage.sectors.index') }}"><i class="fas fa-search-location"></i> Sectors</a>
+    <a href="{{ route('manage.regions.index') }}"><i class="fas fa-search-location"></i> Regions</a>
+    <a href="{{ route('manage.streets.index') }}"> <i class="fas fa-street-view"></i> Streets</a>
+    <a href="{{ route('manage.pharmacies.index') }}"><i class="fas fa-prescription-bottle-alt"></i> Pharmacy</a>
+    <a href="{{ route('manage.categories.index') }}"><i class="fas fa-shopping-bag"></i> Categories</a>
+    <a href="{{ route('manage.products.index') }}"> <i class="fas fa-cart-plus"></i> Products</a>
+    <a href="{{ route('manage.similarproducts.create') }}"><i class="fab fa-shopify"></i> Add Similar Products</a>
+    <a href="{{ route('manage.sales.create') }}"><i class="fas fa-dollar-sign"></i> Add Sales</a>
 
-        <div class="container-fluid pb-2">
-          @yield('content') 
+  </div>
+  <div class="content-wrapper">
 
-        </div>
-  
-</div>
+    @yield('content') 
+   </div>
    
-   
-
-</body>
+  </body>
 </html>

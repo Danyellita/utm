@@ -8,7 +8,7 @@ class Street extends Model
 {
     protected $guarded= [
     	'id',
-    ]
+    ];
     public function sector()
     {
     	return $this->belongsTo(Sector::class);
@@ -17,4 +17,10 @@ class Street extends Model
     {
     	return $this->hasMany(PharmacyAddress::class);
     }
+    public function pharmacies() 
+    {
+        return $this->hasMany(Pharmacy::class);
+    }
+    
+
 }

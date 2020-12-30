@@ -8,18 +8,22 @@ class Product extends Model
 {
     protected $guarded = [
     	'id'
-    ]
+    ];
     public function category()
     {
-    	return $this->belognsTo(Category::class);
+    	return $this->belongsTo(Category::class);
+    }
+    public function pharmacy()
+    {
+        return $this->belongsTo(Pharmacy::class);
     }
     public function similarproducts()
     {
-    	return $this->hasMany(SimilarProduct::class);
+    	return $this->hasMany(Similar::class);
     }
     public function reviews()
     {
-    	return $this->hasMany(Reviews::class);
+    	return $this->hasMany(Review::class);
     }
     public function price()
     {
@@ -27,6 +31,32 @@ class Product extends Model
     }
     public function sales()
     {
-        retunr $this->hasMany(Sale::class);
+        return $this->hasMany(Sale::class);
+    }
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+     public function pictures()
+    {
+        return $this->hasMany(Picture::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::creating(function ($model) {
+             $model->slug = str_slug($model->name, '-') . '-' . rand(1,10);
+        });
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
+    public function children($id) {
+        return $this->where('region_id', $id)->get();
     }
 }

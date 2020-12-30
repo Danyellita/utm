@@ -9512,7 +9512,7 @@ input[type=button].btn-block {
 
 .dropup,
 .dropright,
-.dropdown,
+/*.dropdown,*/
 .dropleft {
   position: relative;
 }

@@ -1,11 +1,10 @@
 @extends('layouts.manage.manage')
 @section('content')
-	{{-- <div class="row justify-content-center"> --}}
-		<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 rounded box-shadow bg-white pb-2 pt-2">
-
+	<div class="container-fluid pb-2" id="fluid">
+		<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 rounded box-shadow bg-white pb-2 pt-2" id="cards">
 			<div class="card">
 				<div class="card-header" style="text-align: center;">
-					<h4>{{ __('Sectoare') }}</h4>
+					<h3><strong>{{ __('Manage Sectors') }}</strong></h3>
 				</div>
 				<div class="card-body">
 					<table class="table table-striped">
@@ -37,24 +36,19 @@
 							</tr>
 						</tbody>
 					</table>	
-							
-							
 				</div>
-						
 			</div>
 			<div id="map" style="height: 50%"></div>
 		</div>
-
+	</div>
 	<script>
-      let map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: {{ $sector->lat }}, lng: {{ $sector->lang }} },
-          zoom: 10,
-        });
-      }
+	    let map;
+		function initMap() {
+	        map = new google.maps.Map(document.getElementById("map"), {
+	        	center: {lat: 47.003670, lng:28.907089},
+	          // center: { lat: {{ $sector->lat }}, lng: {{ $sector->lang }} },
+	          zoom: 10,
+	        });
+	    }
     </script>
-	
-	
 @endsection
