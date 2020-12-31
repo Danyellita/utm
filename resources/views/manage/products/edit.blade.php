@@ -19,7 +19,7 @@
 						        </tr>
 						        <tr scope="row">
 						            <th scope="row">{{ __('Category') }}</th>
-						            <td><input type="text" class="form-control" name="category_id" id="num1" style="width: 50%;" value="{{ $product->category->name }}"></td>
+						            <td><input type="text" class="form-control" name="category_id" id="num1" style="width: 50%;" value="{{ $product->category_id }}"></td>
 						        </tr>
 						        <tr scope="row">
 						            <th scope="row">{{ __('Product composition') }}</th>
