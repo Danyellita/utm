@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserStoreRequest;
 use App\User;
+use Session;
 
 class UserController extends Controller
 {
@@ -22,13 +24,15 @@ class UserController extends Controller
     }
 
     
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        $user=User::create([
+        $user = User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>bcrypt($request->password)
         ]);
+
+        Session::flash('status', ['type' => 'success', 'message' => 'The user was successfuly created!']);
 
         return redirect()->route('manage.users.show', $user->id);
     }
