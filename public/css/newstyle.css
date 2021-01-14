@@ -146,7 +146,9 @@ li a {
   color: green;
 }
 li a:hover {
-  background-color: #111111;
+  /*background-color: #111111;*/
+  /*text-decoration: none;*/
+  color: red;
 }
 .dropdown-content {
   display: none;
@@ -327,4 +329,98 @@ img {vertical-align: middle;}
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    /*width: 33.3333%;*/
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+}
+
+.card_title {
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+ul.flexbox {
+  display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;      
+  display: -webkit-flex;     
+  display: flex;             
+}
+
+ul {
+  list-style: none
+}
+
+.ro {
+  background: slategrey;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  padding: 4px;
+  color: white
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.button li{
+ display: inline-block;
+ padding: 5px 20px;
+}
+ul li {
+  padding: 5px 20px;
+}
+
+body, html{
+    margin:0;
+    padding:0;
+    width:100%;
+    position: absolute;
+    overflow: auto;
 }
