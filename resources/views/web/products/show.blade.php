@@ -16,7 +16,7 @@
 				</div>
 				<h3>Product name: {{ $product->name }}</h3>
 				<h4  style="color: red;"><i class="fas fa-check-circle"></i> Product Details</h4>
-				<p>Price</p>
+				<p>Price: {{ $product->price }}</p>
 				<p>Product Category: {{ $product->category->name }}</p>
 				<p>Product Country: {{ $product->region->name }}</p>
 				

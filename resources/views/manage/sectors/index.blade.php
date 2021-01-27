@@ -46,8 +46,7 @@
 		function initMap() {
 	        map = new google.maps.Map(document.getElementById("map"), {
 	        	center: {lat: 47.003670, lng:28.907089},
-	          // center: { lat: {{ $sector->lat }}, lng: {{ $sector->lang }} },
-	          zoom: 10,
+	        zoom: 10,
 	        });
 	    }
     </script>

@@ -20,6 +20,8 @@
 								<th>Weight</th>
 								<th>Product Measurent</th>
 								<th>Pharmacy</th>
+								<th>Address</th>
+								<th>District</th>
 								<th>Actions</th>
 							</tr>
 						</thread>
@@ -52,6 +54,12 @@
 									</td>
 									<td>
 										{{ $product->pharmacy->name }}
+									</td>
+									<td>
+										{{ $product->pharmacy->street->name }}
+									</td>
+									<td>
+										{{ $product->pharmacy->street->sector->name }}
 									</td>
 									<td>
 										<a href="{{ route('manage.products.show', $product->id) }}"><i class="fas fa-eye"></i></a>

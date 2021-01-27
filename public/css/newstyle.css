@@ -422,5 +422,5 @@ body, html{
     padding:0;
     width:100%;
     position: absolute;
-    overflow: auto;
+    /*overflow: auto;*/
 }

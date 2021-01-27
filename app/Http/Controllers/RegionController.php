@@ -29,7 +29,7 @@ class RegionController extends Controller
         $region=Region::create([
             'name'=>$request->name,
         ]);
-        return redirect()->route('manage.products.index');
+        return redirect()->route('manage.regions.index');
     }
 
     

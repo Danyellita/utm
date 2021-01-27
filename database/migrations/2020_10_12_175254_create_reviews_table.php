@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateReviewsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
        Schema::create('reviews', function (Blueprint $table) {
@@ -19,6 +15,7 @@ class CreateReviewsTable extends Migration
             $table->string('reviews_comments');
             $table->unsignedBigInteger('product_id');
             $table->timestamps();
+            
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')
@@ -27,11 +24,7 @@ class CreateReviewsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('reviews');

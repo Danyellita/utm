@@ -25,6 +25,7 @@ class ProductsTableSeeder extends Seeder
             	'packing_quantity' => 'test',
             	'weight' => $faker->numberBetween(100,1000),
             	'product_measurement' => 'test',
+                'price' => $faker->numberBetween(100,1000),
             	'pharmacy_id' => Pharmacy::all()->shuffle()->first()->id,
             ]);
         }

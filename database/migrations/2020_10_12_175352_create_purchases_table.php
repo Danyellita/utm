@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePurchasesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('purchases', function (Blueprint $table) {
@@ -18,8 +14,8 @@ class CreatePurchasesTable extends Migration
             $table->integer('quantity');
             $table->unsignedBigInteger('product_id');
             $table->string('document_number')->nullable();
-            
             $table->timestamps();
+            
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')
@@ -29,11 +25,6 @@ class CreatePurchasesTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('purchases');

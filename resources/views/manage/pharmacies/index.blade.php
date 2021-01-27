@@ -17,7 +17,8 @@
 								<th>Email</th>
 								<th>Site</th>
 								<th>Working Time</th>
-								<th>Location</th>
+								<th>Address</th>
+								<th>District</th>
 								<th>Actions</th>
 							</tr>
 						</thread>
@@ -44,6 +45,9 @@
 									</td>
 									<td>
 										{{ $pharmacy->street->name }}
+									</td>
+									<td>
+										{{ $pharmacy->street->sector->name }}
 									</td>
 									<td>
 										<a href="{{ route('manage.pharmacies.show', $pharmacy->id) }}"><i class="fas fa-eye"></i></a>

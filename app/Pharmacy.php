@@ -10,12 +10,7 @@ class Pharmacy extends Model
     	'id'
     ];
     
-    public function pharmacyaddress()
-    {
-    	return $this->belongsTo(PharmacyAddress::class);
-    }
-
-    public function street() 
+   public function street() 
     {
     	return $this->belongsTo(Street::class);
 

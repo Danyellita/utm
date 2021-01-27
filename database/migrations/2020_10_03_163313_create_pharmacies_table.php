@@ -6,11 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePharmaciesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('pharmacies', function (Blueprint $table) {
@@ -25,15 +20,12 @@ class CreatePharmaciesTable extends Migration
 
             $table->foreign('street_id')
                 ->references('id')
-                ->on('streets');
+                ->on('streets')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('pharmacies');

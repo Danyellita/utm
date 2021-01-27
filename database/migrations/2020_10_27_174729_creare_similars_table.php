@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreareSimilarsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('similars', function (Blueprint $table) {
@@ -29,15 +25,13 @@ class CreareSimilarsTable extends Migration
 
             $table->foreign('region_id')
                 ->references('id')
-                ->on('regions');
+                ->on('regions')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         //

@@ -6,15 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            // Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug')->unique();
@@ -24,16 +19,21 @@ class CreateProductsTable extends Migration
             $table->string('packing_quantity');
             $table->integer('weight');
             $table->string('product_measurement');
+            $table->decimal('price');
             $table->string('picture')->nullable();
             $table->unsignedBigInteger('pharmacy_id');
             $table->timestamps();
 
             $table->foreign('region_id')
                 ->references('id')
-                ->on('regions');
+                ->on('regions')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreign('pharmacy_id')
                 ->references('id')
-                ->on('pharmacies');
+                ->on('pharmacies')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
@@ -42,11 +42,6 @@ class CreateProductsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('products');

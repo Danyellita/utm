@@ -83,7 +83,7 @@
                     @endif
                     <h3 style="color: red;">{{ $product->name }}</h4>
                     <p> Category {{ $product->category->name }}</p>
-                    <P>Price</P>
+                    <P>Price {{ $product->price }}</P>
                     <a href="{{ route('web.products.show', [$product]) }}" class="btn btn-success" style="margin:5px;"><i class="fas fa-shopping-cart"></i> Buy</a>
                   </div>
               </div>

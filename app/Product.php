@@ -9,30 +9,32 @@ class Product extends Model
     protected $guarded = [
     	'id'
     ];
+
     public function category()
     {
     	return $this->belongsTo(Category::class);
     }
+
     public function pharmacy()
     {
         return $this->belongsTo(Pharmacy::class);
     }
+
     public function similarproducts()
     {
     	return $this->hasMany(Similar::class);
     }
+
     public function reviews()
     {
     	return $this->hasMany(Review::class);
     }
-    public function price()
-    {
-        return $this->hasOne(Price::class);
-    }
+    
     public function sales()
     {
         return $this->hasMany(Sale::class);
     }
+    
     public function region()
     {
         return $this->belongsTo(Region::class);
@@ -56,7 +58,4 @@ class Product extends Model
         return $this->hasMany(Purchase::class);
     }
 
-    public function children($id) {
-        return $this->where('region_id', $id)->get();
-    }
 }
