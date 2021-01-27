@@ -31,6 +31,6 @@ npm run watch
 #Dashboard
 /login for login in 
 
-#Because we already have UserTableSeeder we insert in login form - email: first@gmail.com ; password:123456789
+#Because we already have UserTableSeeder we insert in login form - email: admin@gmail.com ; password:12345678
 
 

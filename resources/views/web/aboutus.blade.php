@@ -13,12 +13,8 @@
 				<p>
 					We provide the following services:
 					<ul>
-						<li>Free delivery</li><br>
-						<li>Competitive prescription pricing</li><br>
-						<li>Refills via phone or online</li><br>
-						<li>Expedient prescription fill time</li><br>
-						<li>Personal service</li><br>
-						<li>Acceptance of most insurance policies</li>
+						<li>Free delivery</li>
+						<li>Competitive prescription pricing</li>
 					</ul>
 				</p>
 				<p>
